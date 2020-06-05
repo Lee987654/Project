@@ -3,10 +3,15 @@ package Shop_pack;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.Initializable;
+
 
 public class ShopController implements Initializable {
 	Connection conn;
@@ -27,5 +32,6 @@ public class ShopController implements Initializable {
 		
 		
 	}
-
 }
+	
+	
