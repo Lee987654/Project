@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
-</BorderPane>
 
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="462.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="60.0" layoutY="250.0" prefHeight="31.0" prefWidth="61.0" text="상의/하의" />
+      <ComboBox layoutX="160.0" layoutY="365.0" prefHeight="22.0" prefWidth="150.0" promptText="              옵션" />
+      <Label layoutX="60.0" layoutY="310.0" text="여름/겨울" />
+      <ComboBox layoutX="160.0" layoutY="255.0" prefHeight="22.0" prefWidth="150.0" promptText="              옵션" />
+      <Label layoutX="60.0" layoutY="370.0" text="   SIZE" />
+      <ComboBox layoutX="160.0" layoutY="305.0" prefHeight="22.0" prefWidth="150.0" promptText="              옵션" />
+      <Button layoutX="115.0" layoutY="545.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="71.0" text="구매확정" />
+      <Button layoutX="258.0" layoutY="545.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="71.0" text="취소" />
+      <Label layoutX="60.0" layoutY="439.0" text="   수량" />
+      <TextField layoutX="174.0" layoutY="435.0" prefHeight="23.0" prefWidth="36.0" />
+      <ImageView fitHeight="185.0" fitWidth="384.0" layoutX="39.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="219.0" layoutY="439.0" text="개" />
+      <Label layoutX="72.0" layoutY="491.0" text="가격" />
+   </children>
+</AnchorPane>
