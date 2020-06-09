@@ -3,19 +3,18 @@ package Shop_pack;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
 
 
 public class ShopController implements Initializable {
 	Connection conn;
 	
+	@FXML ComboBox comboProd, comboWeather, comboSize;
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -31,7 +30,8 @@ public class ShopController implements Initializable {
 		}
 		
 		
-	}
-}
+	}//end of initialize
+	
+}//end of ShopController
 	
 	
