@@ -7,7 +7,8 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
+fx:controller="Shop_pack.LoginController">
    <children>
       <Label alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="80.0" prefWidth="100.0" text="로그인">
          <font>
@@ -17,19 +18,19 @@
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
          <children>
             <Label text="아이디" />
-            <TextField />
+            <TextField fx:id="txtID" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
          <children>
             <Label text="비밀번호" />
-            <PasswordField />
+            <PasswordField fx:id="txtPassword" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
          <children>
-            <Button mnemonicParsing="false" text="로그인" />
-            <Button mnemonicParsing="false" text="취소" />
+            <Button fx:id="btnLogin" mnemonicParsing="false" text="로그인" onAction="#handleLoginAction"/>
+            <Button fx:id="btnCancel" mnemonicParsing="false" text="취소" onAction="#handleBtnCancelAction"/>
          </children>
       </HBox>
    </children>
