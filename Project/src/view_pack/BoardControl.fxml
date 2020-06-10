@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="350" prefWidth="500" 
+fx:controller="view_pack.BoardController">
+	<children>
+		<TableView fx:id="tableView" layoutX="25" layoutY="55" prefHeight="241" prefWidth="175">
+		</TableView>
+		<TextField fx:id="txtTitle" layoutX="283" layoutY="51" prefHeight="23" prefWidth="192"></TextField>
+		<ComboBox fx:id="comboPublic" layoutX="235" layoutY="110" prefHeight="23" prefWidth="85"></ComboBox>
+		<TextField fx:id="dateExit" layoutX="351" layoutY="110" prefHeight="23" prefWidth="113"></TextField>
+		<TextArea fx:id="txtContent" layoutX="235" layoutY="163" prefHeight="131" prefWidth="247"></TextArea>
+		<Label layoutX="25" layoutY="30" text="리스트"></Label>
+		<Label layoutX="238" layoutY="30" text="---------------상세내용---------------"></Label>
+		<Label layoutX="235" layoutY="55" text="제목"></Label>
+		<Label layoutX="235" layoutY="88" text="공개여부"></Label>
+		<Label layoutX="353" layoutY="88" text="종료일"></Label>
+		<Label layoutX="235" layoutY="139" text="내용"></Label>	
+	</children>
+</AnchorPane>
+
