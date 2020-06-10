@@ -39,27 +39,18 @@ public class LoginController implements Initializable {
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-//		String url = "jdbc:oracle:thin:@localhost:1521:xe";
-//
-//		try {
-//			Class.forName("oracle.jdbc.driver.OracleDriver");
-//			conn = DriverManager.getConnection(url, "hr", "hr");
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-	}//end of initialize
-
-	public void handleLoginAction(ActionEvent e) {
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
-		
+
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			conn = DriverManager.getConnection(url, "hr", "hr");
-		} catch (Exception e1) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			e.printStackTrace();
 		}
+	}//end of initialize
+
+	public void handleLoginAction(ActionEvent e) {
 		
 		if (txtID.getText() == null || txtID.getText().contentEquals("")) {
 			//messagePopup("ID를 입력하세요.");
