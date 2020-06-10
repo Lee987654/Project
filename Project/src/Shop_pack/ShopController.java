@@ -2,14 +2,19 @@ package Shop_pack
 
 import java.net.URL;
 import java.sql.Connection;
+<<<<<<< HEAD
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.time.format.DateTimeFormatter;
+=======
+import java.sql.DriverManager;
+>>>>>>> branch 'master' of https://github.com/Lee987654/Project.git
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+<<<<<<< HEAD
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -26,6 +31,11 @@ import javafx.stage.Popup;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 	
+=======
+import javafx.scene.control.ComboBox;
+
+
+>>>>>>> branch 'master' of https://github.com/Lee987654/Project.git
 public class ShopController implements Initializable {
 	Connection conn;//import java.sql
 	
@@ -37,6 +47,7 @@ public class ShopController implements Initializable {
 	@FXML private ComboBox<String> option3;
 	@FXML private TextField txtTitle;
 	
+	@FXML ComboBox comboProd, comboWeather, comboSize;
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -48,6 +59,7 @@ public class ShopController implements Initializable {
 		} catch (Exception e) {
 			
 			e.printStackTrace();
+<<<<<<< HEAD
 			
  public void handleBtnRegAction(ActionEvent e) {
 //	if (txtTitle.getText() == null || txtTitle.getText().contentEquals("")) {
@@ -133,3 +145,13 @@ public class ShopController implements Initializable {
 		}
 }// end of class		
 		
+=======
+		}
+		
+		
+	}//end of initialize
+	
+}//end of ShopController
+	
+	
+>>>>>>> branch 'master' of https://github.com/Lee987654/Project.git
