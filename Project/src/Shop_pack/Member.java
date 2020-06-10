@@ -3,9 +3,9 @@ package Shop_pack;
 import javafx.beans.property.SimpleStringProperty;
 
 public class Member {
-	private SimpleStringProperty id;
-	private SimpleStringProperty password;
-	private SimpleStringProperty name;
+	private SimpleStringProperty id = null;
+	private SimpleStringProperty password = null;
+	private SimpleStringProperty name = null;
 	
 	public Member(String id, String password, String name) {
 		this.id = new SimpleStringProperty(id);

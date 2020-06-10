@@ -8,7 +8,7 @@
 
 
 <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
-fx:controller="Shop_pack.LoginController">
+>
    <children>
       <Label alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="80.0" prefWidth="100.0" text="로그인">
          <font>
@@ -29,8 +29,8 @@ fx:controller="Shop_pack.LoginController">
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
          <children>
-            <Button fx:id="btnLogin" mnemonicParsing="false" text="로그인" onAction="#handleLoginAction"/>
-            <Button fx:id="btnCancel" mnemonicParsing="false" text="취소" onAction="#handleBtnCancelAction"/>
+            <Button fx:id="btnLogin" mnemonicParsing="false" text="로그인"/>
+            <Button fx:id="btnCancel" mnemonicParsing="false" text="취소"/>
          </children>
       </HBox>
    </children>
