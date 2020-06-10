@@ -26,10 +26,10 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class ShopController_test implements Initializable {
-	@FXML
-	TextField txtID;
-	@FXML
-	PasswordField txtPassword;
+//	@FXML
+//	TextField txtID;
+//	@FXML
+//	PasswordField txtPassword;
 	@FXML
 	Button btnLogin, btnSignUp;
 
@@ -51,15 +51,7 @@ public class ShopController_test implements Initializable {
 			e1.printStackTrace();
 		}
 
-		btnLogin.setOnAction(new EventHandler<ActionEvent>() {
-
-			@Override
-			public void handle(ActionEvent arg0) {
-				handleBtnLoginAction(arg0);
-			}
-
-		});
-
+		btnLogin.setOnAction((e)-> handleBtnLoginAction(e));
 		btnSignUp.setOnAction((e) -> handleBtnSignUpAction(e));
 	}//end of initialize
 
@@ -76,36 +68,53 @@ public class ShopController_test implements Initializable {
 			loginStage.setScene(scene);
 			loginStage.show();
 			loginStage.setResizable(false);
-
-			Button btnLogin = (Button) parent.lookup("#btnLogin");
-			btnLogin.setOnAction(new EventHandler<ActionEvent>() {
+			
+			TextField txtID = (TextField) parent.lookup("#txtID");
+			PasswordField txtPassword = (PasswordField) parent.lookup("#txtPassword");
+			Button inBtnLogin = (Button) parent.lookup("#btnLogin");
+			
+			inBtnLogin.setOnAction(new EventHandler<ActionEvent>() {
 
 				@Override
 				public void handle(ActionEvent event) {
-					handleLoginAction(event);
-					//loginMember.setId(loginController.loginMember.getId());
-					//loginMember.setName(loginController.loginMember.getName());
-					loginStage.close();
-				}
+					
+					String sql = "select ID, PASSWORD, NAME from MEMBER";
 
+					try {
+						PreparedStatement pstmt = conn.prepareStatement(sql);
+						ResultSet rs = pstmt.executeQuery();//지저분함. db에서 추출하려하지말고 리스트에 다 넣은 다음에 리스트에서 맞는거 출력해야겠다.
+						while (rs.next()) {
+
+							Member member = new Member(rs.getString("ID"), rs.getString("PASSWORD"), rs.getString("Name"));
+							memList.add(member);//memList에 회원이력을 전부 삽입.
+						}
+					} catch (SQLException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					for (int i = 0; i < memList.size(); i++) {
+						if (memList.get(i).getId().equals(txtID.getText())
+								&& memList.get(i).getPassword().equals(txtPassword.getText())) {
+							System.out.println(memList.get(i).getName() + " 님 환영합니다.");
+							//shopController2.loginMember = new Member(memList.get(i).getId(),memList.get(i).getPassword(),memList.get(i).getName());
+							loginMember.setId(memList.get(i).getId());
+							loginMember.setName(memList.get(i).getName());
+							break;
+							//만약 회원리스트와 맞는 아이디/비번이라면 창 종료.
+						}
+					}
+					loginStage.close();
+					btnLogin.setText(loginMember.getName() + "님 환영합니다.");
+				}
 			});
 
 			Button btnCancel = (Button) parent.lookup("#btnCancel");
-			btnCancel.setOnAction(new EventHandler<ActionEvent>() {
-
-				@Override
-				public void handle(ActionEvent event) {
-					loginStage.close();
-
-				}
-
-			});
+			btnCancel.setOnAction((e)-> loginStage.close());
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}//end of handleBtnLogin
 
 	public void handleBtnSignUpAction(ActionEvent event) {
@@ -117,55 +126,20 @@ public class ShopController_test implements Initializable {
 		Parent parent;
 		try {
 			parent = FXMLLoader.load(getClass().getResource("ShopSignUp.fxml"));
+			
+			Button btnCancel = (Button) parent.lookup("#btnCancel");
+			btnCancel.setOnAction((e)->signUpStage.close());
+			
 			Scene scene = new Scene(parent);
 			signUpStage.setScene(scene);
 			signUpStage.show();
 			signUpStage.setResizable(false);
-
+					
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}//end of handleBtnSignUp..
 
-	public void handleLoginAction(ActionEvent event) {
-		
-		
-
-		if (txtID.getText() == null || txtID.getText().contentEquals("")) {
-			//messagePopup("ID를 입력하세요.");
-		} else if (txtPassword.getText() == null || txtPassword.getText().contentEquals("")) {
-			//messagePopup("Password를 입력하세요.");
-		} else {
-			String sql = "select ID, PASSWORD, NAME from MEMBER";
-
-			try {
-				PreparedStatement pstmt = conn.prepareStatement(sql);
-				ResultSet rs = pstmt.executeQuery();//지저분함. db에서 추출하려하지말고 리스트에 다 넣은 다음에 리스트에서 맞는거 출력해야겠다.
-				while (rs.next()) {
-
-					Member member = new Member(rs.getString("ID"), rs.getString("PASSWORD"), rs.getString("Name"));
-					memList.add(member);//memList에 회원이력을 전부 삽입.
-				}
-			} catch (SQLException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-
-			for (int i = 0; i < memList.size(); i++) {
-				if (memList.get(i).getId().equals(txtID.getText())
-						&& memList.get(i).getPassword().equals(txtPassword.getText())) {
-					System.out.println(memList.get(i).getName() + " 님 환영합니다.");
-					//shopController2.loginMember = new Member(memList.get(i).getId(),memList.get(i).getPassword(),memList.get(i).getName());
-					loginMember.setId(memList.get(i).getId());
-					loginMember.setName(memList.get(i).getName());
-					break;
-					//만약 회원리스트와 맞는 아이디/비번이라면 창 종료.
-				}
-			}
-		}
-
-	}//end of handleLoginAction.
 
 }//end of ShopController2

@@ -93,8 +93,8 @@ public class SignUpController implements Initializable {
 		popup.show(btnSignUp.getScene().getWindow());
 		
 	}
-	
-	public void handleBtnCancelAction(ActionEvent e) {
-		Platform.exit();
-	}
+//	
+//	public void handleBtnCancelAction(ActionEvent e) {
+//		
+//	}
 }//end of SignUpController
