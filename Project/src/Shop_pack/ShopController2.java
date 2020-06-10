@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
@@ -15,12 +16,12 @@ import javafx.scene.image.ImageView;
 
 public class ShopController2 implements Initializable {
 	@FXML private ListView<String> listView;
-	@FXML private TableView<Phone> tableView;
+	@FXML private TableView<clothes> tableView;
 	@FXML private ImageView imageView;
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		listView setItems(FXCollections observableArrayList(
+		listView.setItems(FXCollectionsobservableArrayList(
 		"ªÛ¿«", "«œ¿«"
 		
 		));
@@ -47,7 +48,7 @@ public class ShopController2 implements Initializable {
 			tcClothes.setCellValueFactory(new PropertyValueFactory("Clothes"));
 			tcClothes.setStyle("-fx-alignment: CENTER;");
 			
-			Tablecolumn tcImage = tableView.getColumns().get(1);
+			TableColumn tcImage = tableView.getColumns().get(1);
 			tcImage.setCellValueFactory(new PropertyValueFactory("image"));
 			tcImage.setStyle("-fx-alignment: CENTER;");
 			
@@ -72,37 +73,17 @@ public class ShopController2 implements Initializable {
 				String item = listView.getSelectionModel().getSelectedItem();
 				System.out.println("ListView ø : "  + item);
 				
-				Phone phone = tableView.getSelectionModel().getSelectedItem();
-							}
-						}
-			
-			
-			
-			
-			
-			
-			}
+				clothes clothes = tableView.getSelectionModel().getSelectedItem();
 				
+				System.out.println("TableView ø : "+clothes.getSmartclothes());
+				System.out.println("TableView ¿ÃπÃ¡ˆ: " + clothes.getImage());
+			
 			}
-	
-	
-	
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
+						
+				
+				public void handleBtnCancelAction(ActionEvent e) {
+					Platform.exit();
+				
+				}
+			
+			}			
