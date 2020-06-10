@@ -17,6 +17,6 @@ fx:controller="Shop_pack.SignUpController">
       <Label layoutX="24.0" layoutY="120.0" text="개인정보_이름" />
       <TextField fx:id="txtName" layoutX="130.0" layoutY="116.0" />
       <Button fx:id="btnSignUp" layoutX="70.0" layoutY="150.0" mnemonicParsing="false" text="회원가입" onAction="#handleBtnSignUpAction"/>
-      <Button fx:id="btnCancel" layoutX="169.0" layoutY="150.0" mnemonicParsing="false" text="취소" onAction="#handleBtnCancelAction"/>
+      <Button fx:id="btnCancel" layoutX="169.0" layoutY="150.0" mnemonicParsing="false" text="취소" />
    </children>
 </AnchorPane>
