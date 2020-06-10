@@ -23,7 +23,3 @@ public class ShopMain extends Application {
 	}
 }
 
-//회원 테이블  -> id, password, 이름
-//구매내역 테이블 -> id, 상품, size, 개수, 총구매액
-//상품 테이블 -> 상품 이름, 종류, 가격, 사이즈
-
