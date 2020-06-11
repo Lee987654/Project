@@ -40,7 +40,7 @@ public class ShopController_test implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-
+		
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
 
 		try {
@@ -79,6 +79,8 @@ public class ShopController_test implements Initializable {
 				public void handle(ActionEvent event) {
 					
 					String sql = "select ID, PASSWORD, NAME from MEMBER";
+					
+					
 
 					try {
 						PreparedStatement pstmt = conn.prepareStatement(sql);

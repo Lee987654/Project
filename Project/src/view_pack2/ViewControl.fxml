@@ -29,34 +29,17 @@
       <Label layoutX="66.0" layoutY="381.0" text="SIZE" />
       <Label layoutX="66.0" layoutY="437.0" text="수량" />
       <Label layoutX="66.0" layoutY="496.0" text="가격" />
-      <ComboBox layoutX="133.0" layoutY="269.0" prefHeight="23.0" prefWidth="167.0" promptText="   --- 선택하세요. ---">                
+      <ComboBox fx:id="comboPublic" layoutX="133.0" layoutY="269.0" prefHeight="23.0" prefWidth="167.0" promptText="   --- 선택하세요. ---">                
       	<items>
-      		<FXCollections fx:factory="observableArrayList">
-      			<String fx:value="             - TOPS -" />
-      			<String fx:value="          - BOTTOMS  -" />
-      			<String fx:value="             - ACC  -" />
+      		<FXCollections  fx:factory="observableArrayList">
+      			<String fx:value="TOPS" />
+      			<String fx:value="BOTTOMS" />
+      			<String fx:value="ACC" />
       			</FXCollections>
      	 </items>
       </ComboBox>
-      <ComboBox layoutX="133.0" layoutY="323.0" prefHeight="23.0" prefWidth="167.0" promptText="   --- 선택하세요. ---">
-      	<items>
-      		<FXCollections fx:factory="observableArrayList">
-      			<String fx:value="          - 티셔츠 -" />
-      			<String fx:value="           - 셔츠 -" />
-      			<String fx:value="          - 가디건 -" />
-      			<String fx:value="          - 바람막이 -" />
-      			<String fx:value="           - 코트 -" />
-      			<String fx:value="           - 패딩 -" />
-      			
-      			<String fx:value="          - 청바지 -" />
-      			<String fx:value="          - 면바지 -" />
-      			<String fx:value="          - 슬랙스 -" />
-      			
-      			<String fx:value="           - 모자 -" />
-      			<String fx:value="           - 벨트 -" />
-      			<String fx:value="           - 신발 -" />
-      		</FXCollections>
-     	 </items>
+      <ComboBox fx:id="comboPublic2" layoutX="133.0" layoutY="323.0" prefHeight="23.0" prefWidth="167.0" promptText="   --- 선택하세요. ---">
+      	
       </ComboBox>
       <ComboBox layoutX="133.0" layoutY="377.0" prefHeight="23.0" prefWidth="167.0" promptText="   --- 선택하세요. ---">                
       	<items>

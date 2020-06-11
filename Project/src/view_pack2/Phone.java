@@ -1,9 +1,9 @@
-package view_pack;
+package view_pack2;
 
 import javafx.beans.property.SimpleStringProperty;
 
 public class Phone {
-	private SimpleStringProperty smartPhone;//ë¬¸ì?—´ë¡? ?†?„±?„ ?…‹?Œ…?•˜?Š” property
+	private SimpleStringProperty smartPhone;//ë¬¸ì?ï¿½ï¿½ï¿½? ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ property
 	private SimpleStringProperty image;
 	
 	Phone(String smartPhone, String image){

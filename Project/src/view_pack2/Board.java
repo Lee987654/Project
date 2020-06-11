@@ -1,8 +1,8 @@
-package view_pack;
+package view_pack2;
 
 import javafx.beans.property.SimpleStringProperty;
-//5ê°œë?? ?…? ¥ë°›ëŠ” ?ƒ?„±?, get/set/simplestringproperty, returnê°’ë“±?„ ?‚¬?š©?•´ boardë¥? ?™„?„±?•´?„œ ?˜¤ê¸?.
-//?™œ propertyë¥? ?†µ?•´?„œ ?„ ?–¸?•˜ê³? ê°’ì„ ê°?? ¸?˜¤ê³? ?•˜?Š”ê±°ì??
+//5ê°œï¿½?? ?ï¿½ï¿½?ï¿½ï¿½ë°›ëŠ” ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½, get/set/simplestringproperty, returnê°’ë“±?ï¿½ï¿½ ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ boardï¿½? ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ ?ï¿½ï¿½ï¿½?.
+//?ï¿½ï¿½ propertyï¿½? ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ï¿½? ê°’ì„ ï¿½??ï¿½ï¿½?ï¿½ï¿½ï¿½? ?ï¿½ï¿½?ï¿½ï¿½ê±°ï¿½??
 public class Board {
 	private SimpleStringProperty title;
 	private SimpleStringProperty password;

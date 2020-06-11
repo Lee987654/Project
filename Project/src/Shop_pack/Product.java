@@ -4,55 +4,77 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 public class Product {
-	private SimpleStringProperty name;
-	private SimpleStringProperty weather;
-	private SimpleStringProperty size;
+	private SimpleStringProperty prod_Id;
+	private SimpleStringProperty kind_1;
+	private SimpleStringProperty kind_2;
 	private SimpleIntegerProperty price;
+	private SimpleStringProperty prod_Size;
 	
-	Product(String name, String weather, String size, int price){
-		this.name = new SimpleStringProperty(name);
-		this.weather = new SimpleStringProperty(weather);
-		this.size = new SimpleStringProperty(size);
+	public Product(String prod_Id, String kind_1, String kind_2, int price, String prod_Size) {
+		this.prod_Id = new SimpleStringProperty(prod_Id);
+		this.kind_1 = new SimpleStringProperty(kind_1);
+		this.kind_2 = new SimpleStringProperty(kind_2);
 		this.price = new SimpleIntegerProperty(price);
+		this.prod_Size = new SimpleStringProperty(prod_Size);
+		
+		
 	}
 	
-	public String getName() {
-		return this.name.get();
-	}
-	public void setName(String name) {
-		this.name.set(name);
-	}
-	public SimpleStringProperty nameProperty() {
-		return this.name;
+	public String getProd_Id() {
+		return this.prod_Id.get();
 	}
 	
-	public String getWeather() {
-		return this.weather.get();
+	public void setProd_Id(String prod_Id) {
+		this.prod_Id.set(prod_Id);
 	}
-	public void setWeather(String weather) {
-		this.weather.set(weather);
-	}
-	public SimpleStringProperty weatherProperty() {
-		return this.weather;
+	public SimpleStringProperty prod_IdProperty() {
+		return this.prod_Id;
 	}
 	
-	public String getSize() {
-		return this.size.get();
+	
+	public String getKind_1() {
+		return this.kind_1.get();
 	}
-	public void setSize(String size) {
-		this.size.set(size);
+	
+	public void setKind_1(String kind_1) {
+		this.kind_1.set(kind_1);
 	}
-	public SimpleStringProperty sizeProperty() {
-		return this.size;
+	public SimpleStringProperty kind_1Property() {
+		return this.kind_1;
+	}
+	
+	
+	public String getKind_2() {
+		return this.prod_Id.get();
+	}
+	
+	public void setKind_2(String kind_2) {
+		this.kind_2.set(kind_2);
+	}
+	public SimpleStringProperty kind_2Property() {
+		return this.kind_2;
 	}
 	
 	public int getPrice() {
 		return this.price.get();
 	}
+	
 	public void setPrice(int price) {
 		this.price.set(price);
 	}
 	public SimpleIntegerProperty priceProperty() {
 		return this.price;
+	}
+	
+	
+	public String getProd_Size() {
+		return this.prod_Size.get();
+	}
+	
+	public void setProd_Size(String prod_Size) {
+		this.prod_Size.set(prod_Size);
+	}
+	public SimpleStringProperty prod_SizeProperty() {
+		return this.prod_Size;
 	}
 }
