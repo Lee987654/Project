@@ -125,14 +125,12 @@ public class ViewController implements Initializable {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-				for(int i=0; i<prodList.size(); i++) {
 					comboPublic2.setItems(kind2List);
-					
-				}
-			
 			}
 		});
-	}
+	}//comboPublic 에 change action걸고 바뀔때마다 선택된 값에 맞는 이미지를 보여준다.->db에서 가져온 데이터에서 id값을 빼서 이미지뷰에 id값+이미지.
+	//product에는 사이즈가 null값으로 지정되어있다. 수량까지 선택한 후 확인 버튼을 누르면 해당 product에 size를 지정하고 테이블 란에 리스트를 쭉 띄워준 뒤 가격*수량으로 합계가격을 도출해준다., 사이즈와 수량, 분류가 입력되지 않으면 팝업을 띄운다.
+	//구매확정 버튼을 누르면 로그인 멤버가 null이 아니라면 테이블로 들어갈 수 있게 만든다. else->로그인이 필요합니다 팝업 띄우기.
 	
 	
 	public void handleBtnRegAction(ActionEvent e) {

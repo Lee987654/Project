@@ -10,7 +10,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.collections.FXCollections?>
 
-<AnchorPane minHeight="180.0" prefHeight="613.0" prefWidth="436.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_pack.ViewController">
+<AnchorPane minHeight="180.0" prefHeight="613.0" prefWidth="436.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_pack2.ViewController">
    <children>
       <TableView fx:id="tableView" layoutX="72.0" layoutY="164.0" prefHeight="48.0" prefWidth="297.0">
         <columns>
