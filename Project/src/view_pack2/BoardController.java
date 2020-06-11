@@ -1,4 +1,4 @@
-package view_pack;
+package view_pack2;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -21,7 +21,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-//tableview?—?Š” ? œëª©ê³¼ ì¢…ë£Œ?¼?ë§? ?…¸ì¶?.
+//tableview?ï¿½ï¿½?ï¿½ï¿½ ?ï¿½ï¿½ëª©ê³¼ ì¢…ë£Œ?ï¿½ï¿½?ï¿½ï¿½ï¿½? ?ï¿½ï¿½ï¿½?.
 import javafx.util.Callback;
 public class BoardController implements Initializable {
 	Connection conn;
@@ -44,23 +44,23 @@ public class BoardController implements Initializable {
 		}
 		
 		ObservableList<Board> boardList = getBoardList();//FXCollections.observableArrayList();
-		//boardList.add(new Board("test", "1234", "ê³µê°œ", "2020/05/05","?‚´?š©"));
+		//boardList.add(new Board("test", "1234", "ê³µê°œ", "2020/05/05","?ï¿½ï¿½?ï¿½ï¿½"));
 		//title
-		TableColumn<Board, String> tcTitle = new TableColumn<Board, String>();//?—¬ê¸°ë??„° ?•´?„ ?•„?š”?•´.
+		TableColumn<Board, String> tcTitle = new TableColumn<Board, String>();//?ï¿½ï¿½ê¸°ï¿½??ï¿½ï¿½ ?ï¿½ï¿½?ï¿½ï¿½ ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½.
 		tcTitle.setCellValueFactory(new Callback<CellDataFeatures<Board, String>, ObservableValue<String>>(){
-			//ì²«ë²ˆì§¸ëŠ” ?¸?’‹, ?‘ë²ˆì§¸?Š” ë¦¬í„´ ???…
+			//ì²«ë²ˆì§¸ëŠ” ?ï¿½ï¿½?ï¿½ï¿½, ?ï¿½ï¿½ë²ˆì§¸?ï¿½ï¿½ ë¦¬í„´ ???ï¿½ï¿½
 			@Override
 			public ObservableValue<String> call(CellDataFeatures<Board, String> param) {
 				return param.getValue().titleProperty();
 			}
 			
 		});
-		tcTitle.setText("? œëª?");
+		tcTitle.setText("?ï¿½ï¿½ï¿½?");
 		
 		//exitDate
 		TableColumn<Board, String> tcExitDate = new TableColumn<>();
 		tcExitDate.setCellValueFactory(new PropertyValueFactory<Board, String>("exitDate"));
-		tcExitDate.setText("ì¢…ë£Œ?¼?");
+		tcExitDate.setText("ì¢…ë£Œ?ï¿½ï¿½?ï¿½ï¿½");
 		
 		tableView.getColumns().add(tcTitle);
 		tableView.getColumns().add(tcExitDate);
@@ -77,8 +77,8 @@ public class BoardController implements Initializable {
 				dateExit.setText(newVal.getExitDate());
 				txtContent.setText(newVal.getContent());
 				
-				//?´? „, ?‹¤?Œë²„íŠ¼ ì¶”ê??•´?„œ ?‹¤?Œ ë²„íŠ¼ ?ˆ„ë¥´ë©´ ?‹¤?Œê°?, ?´? „?ˆ„ë¥´ë©´ ?´? „ê°?.
-				//? œëª? ?„£?œ¼ë©? ? œëª©ê¸°ì¤??œ¼ë¡? ê°™ì? ? œëª©ì˜ ?‚´?š©?„ ?ˆ˜? • ë²„íŠ¼(?ˆ˜? •?ˆ„ë¥´ë©´ ?ˆ˜? •ê°??Š¥? ?ˆ˜? •?•œ?’¤ ?ˆ˜? •ë²„íŠ¼ ?ˆ„ë¥´ë©´ ?ˆ˜? • ? ?š©?) ì¶”ê??•´?„œ ì¶œë ¥?œ ?‚´?š©?„ ?‚´ê°? ?…? ¥?•´?„œ ?ˆ˜? •?•˜?Š” ê²?.
+				//?ï¿½ï¿½?ï¿½ï¿½, ?ï¿½ï¿½?ï¿½ï¿½ë²„íŠ¼ ì¶”ï¿½??ï¿½ï¿½?ï¿½ï¿½ ?ï¿½ï¿½?ï¿½ï¿½ ë²„íŠ¼ ?ï¿½ï¿½ë¥´ë©´ ?ï¿½ï¿½?ï¿½ï¿½ï¿½?, ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ë¥´ë©´ ?ï¿½ï¿½?ï¿½ï¿½ï¿½?.
+				//?ï¿½ï¿½ï¿½? ?ï¿½ï¿½?ï¿½ï¿½ï¿½? ?ï¿½ï¿½ëª©ê¸°ï¿½??ï¿½ï¿½ï¿½? ê°™ï¿½? ?ï¿½ï¿½ëª©ì˜ ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ ?ï¿½ï¿½?ï¿½ï¿½ ë²„íŠ¼(?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ë¥´ë©´ ?ï¿½ï¿½?ï¿½ï¿½ï¿½??ï¿½ï¿½? ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ ?ï¿½ï¿½?ï¿½ï¿½ë²„íŠ¼ ?ï¿½ï¿½ë¥´ë©´ ?ï¿½ï¿½?ï¿½ï¿½ ?ï¿½ï¿½?ï¿½ï¿½?) ì¶”ï¿½??ï¿½ï¿½?ï¿½ï¿½ ì¶œë ¥?ï¿½ï¿½ ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ ?ï¿½ï¿½ï¿½? ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ ï¿½?.
 			}
 			
 		});
@@ -93,7 +93,7 @@ public class BoardController implements Initializable {
 		String sql = "select title, publicity, exit_date, content from board";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
-			ResultSet rs = pstmt.executeQuery();//resultset?? ë¬´ìŠ¨ ê¸°ëŠ¥?´ì§??
+			ResultSet rs = pstmt.executeQuery();//resultset?? ë¬´ìŠ¨ ê¸°ëŠ¥?ï¿½ï¿½ï¿½??
 			while(rs.next()) {
 				Board board = new Board(rs.getString("title"),null, rs.getString("publicity"), rs.getString("exit_date"), rs.getString("content"));
 			list.add(board);

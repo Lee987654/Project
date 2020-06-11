@@ -34,13 +34,13 @@ public class ShopController_test implements Initializable {
 	Button btnLogin, btnSignUp;
 
 	Connection conn;
-	Member loginMember = new Member(null, null, null);
+	Member loginMember = new Member(null, null, null);//이걸 초기값을 null이 아닌걸로 설정해서 if문 써줬으면 됐을걸? ㅋㅋㅋㅋㅋㅋㅋ 븅신 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
 	ObservableList<Member> memList = FXCollections.observableArrayList();
 	//LoginController loginController = new LoginController();
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-
+		
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
 
 		try {
@@ -79,6 +79,8 @@ public class ShopController_test implements Initializable {
 				public void handle(ActionEvent event) {
 					
 					String sql = "select ID, PASSWORD, NAME from MEMBER";
+					
+					
 
 					try {
 						PreparedStatement pstmt = conn.prepareStatement(sql);

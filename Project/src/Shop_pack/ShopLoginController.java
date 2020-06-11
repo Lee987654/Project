@@ -13,7 +13,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.Initializable;
 
 
-public class ShopController implements Initializable {
+public class ShopLoginController implements Initializable {
 	Connection conn;
 	
 	
