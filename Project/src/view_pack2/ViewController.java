@@ -102,12 +102,12 @@ public class ViewController implements Initializable {
 
 			@Override
 			public void changed(ObservableValue<? extends String> observable, String oldVal, String newVal) {
-				String sql = "select PROD_ID, KIND_1, KIND_2, PRICE, PROD_SIZE FROM PRODUCT WHERE KIND_1 LIKE 'TOPS'";
+				String sql = "select PROD_ID, KIND_1, KIND_2, PRICE, PROD_SIZE FROM PRODUCT WHERE KIND_1 IN (?)";
 				ObservableList<Product> prodList = FXCollections.observableArrayList();
 				ObservableList<String> kind2List = FXCollections.observableArrayList();
 				try {
 					PreparedStatement pstmt = conn.prepareStatement(sql);
-					//pstmt.setString(1, newVal);
+					pstmt.setString(1, newVal);
 					ResultSet rs = pstmt.executeQuery();
 					
 					int i=0;
