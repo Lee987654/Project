@@ -1,4 +1,4 @@
-package Shop_pack;
+package view_pack;
 
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
