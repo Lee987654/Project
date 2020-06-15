@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.collections.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
@@ -11,26 +11,31 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.collections.FXCollections?>
 
-<AnchorPane minHeight="180.0" prefWidth="436.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_pack2.ViewController">
+<AnchorPane minHeight="180.0" prefHeight="613.0" prefWidth="436.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_pack2.ViewController">
    <children>
-      <TableView fx:id="tableView" layoutX="72.0" layoutY="164.0" prefHeight="48.0" prefWidth="297.0">
+      <Label fx:id="labelWelcome" layoutX="14.0" layoutY="17.0" text="">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableView" layoutX="131.0" layoutY="436.0" prefHeight="100.0" prefWidth="220.0">
         <columns>
-          <TableColumn prefWidth="100.0" text="옷" />
-          <TableColumn prefWidth="100.0" text="이미지" />
+          <TableColumn prefWidth="70.0" text="상품명" />
+          <TableColumn prefWidth="50.0" text="사이즈" />
+            <TableColumn prefWidth="60.0" text="가격" />
+            <TableColumn prefWidth="40.0" text="갯수" />
         </columns>
       </TableView>
       <ImageView fx:id="imageView" fitHeight="86.0" fitWidth="136.0" layoutX="167.0" layoutY="49.0" preserveRatio="true" />
-      <Button layoutX="135.0" layoutY="575.0" mnemonicParsing="false" onAction="#handleBtnRegAction" text="즉시구매" />
-      <Button layoutX="216.0" layoutY="575.0" mnemonicParsing="false" onAction="#handleBtnCancelAction" text="장바구니에 담기">
-      	
-      	
-      </Button>
-      <Label layoutX="54.0" layoutY="273.0" text="[1] 분류" />
-      <Label layoutX="54.0" layoutY="327.0" text="[2] 분류" />
-      <Label layoutX="66.0" layoutY="381.0" text="SIZE" />
-      <Label layoutX="66.0" layoutY="437.0" text="수량" />
-      <Label layoutX="66.0" layoutY="496.0" text="가격" />
-      <ComboBox fx:id="comboPublic" layoutX="133.0" layoutY="269.0" prefHeight="23.0" prefWidth="167.0" promptText="   --- 선택하세요. ---">                
+      <Button fx:id="btnBuy" layoutX="186.0" layoutY="553.0" mnemonicParsing="false" onAction="#handleBtnRegAction" text="즉시구매" />
+      <!-- <Button layoutX="217.0" layoutY="552.0" mnemonicParsing="false" onAction="#handleBtnCancelAction" text="장바구니에 담기"> -->
+      <!-- </Button> -->
+      <Label layoutX="57.0" layoutY="234.0" text="[1] 분류" />
+      <Label layoutX="57.0" layoutY="288.0" text="[2] 분류" />
+      <Label layoutX="69.0" layoutY="342.0" text="SIZE" />
+      <Label layoutX="69.0" layoutY="398.0" text="수량" />
+      <Label layoutX="67.0" layoutY="471.0" text="가격" />
+      <ComboBox fx:id="comboPublic" layoutX="136.0" layoutY="230.0" prefHeight="23.0" prefWidth="212.0" promptText="   --- 선택하세요. ---">                
       	<items>
       		<FXCollections fx:factory="observableArrayList">
       			<String fx:value="TOPS" />
@@ -39,35 +44,24 @@
       			</FXCollections>
      	 </items>
       </ComboBox>
-      <ComboBox fx:id="comboPublic2" layoutX="133.0" layoutY="323.0" prefHeight="23.0" prefWidth="167.0" promptText="   --- 선택하세요. ---">
+      <ComboBox fx:id="comboPublic2" layoutX="136.0" layoutY="284.0" prefHeight="23.0" prefWidth="212.0" promptText="   --- 선택하세요. ---">
       	
       </ComboBox>
-      <ComboBox fx:id="comboSize" layoutX="133.0" layoutY="377.0" prefHeight="23.0" prefWidth="167.0" promptText="   --- 선택하세요. ---">                
+      <ComboBox fx:id="comboSize" layoutX="136.0" layoutY="338.0" prefHeight="23.0" prefWidth="212.0" promptText="   --- 선택하세요. ---">                
       	<items>
       		<FXCollections fx:factory="observableArrayList">
-      			<String fx:value="             - S(90) -" />
-      			<String fx:value="             - M(95) -" />
-      			<String fx:value="             - L(100) -" />
-      			<String fx:value="             - XL(105) -" />
-      			<String fx:value="             - XXL(110) -" />
+      			<String fx:value=" - S(90) -" />
+      			<String fx:value=" - M(95) -" />
+      			<String fx:value=" - L(100) -" />
+      			<String fx:value=" - XL(105) -" />
+      			<String fx:value=" - XXL(110) -" />
       		</FXCollections>
      	 </items>
       </ComboBox>
-      <TextField fx:id="txtNum" layoutX="135.0" layoutY="433.0" prefHeight="23.0" prefWidth="24.0" />
-      <Label layoutX="173.0" layoutY="437.0" text="개" />
+      <TextField fx:id="txtNum" layoutX="138.0" layoutY="394.0" prefHeight="25.0" prefWidth="50.0" />
+      <Label layoutX="197.0" layoutY="398.0" text="개" />
       <Button fx:id="btnLogin" layoutX="303.0" layoutY="14.0" mnemonicParsing="false" text="로그인" />
       <Button fx:id="btnSignUp" layoutX="367.0" layoutY="14.0" mnemonicParsing="false" text="회원가입" />
-      <Button fx:id="btnSel" layoutX="248.0" layoutY="433.0" mnemonicParsing="false" text="선택" />
-      <VBox fx:id="vboxList" layoutX="112.0" layoutY="475.0" prefWidth="250.0" spacing="10.0">
-         <children>
-            <Label text="Label" />
-            <Label text="Label" />
-         </children>
-         <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </padding></VBox>
+      <Button fx:id="btnSel" layoutX="250.0" layoutY="394.0" mnemonicParsing="false" text="선택" />
    </children>
-   <padding>
-      <Insets bottom="50.0" />
-   </padding>
 </AnchorPane>
