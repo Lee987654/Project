@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="462.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-fx:controller="Shop_pack.ShopController_test">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="462.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shop_pack.ShopController_test">
    <children>
       <Label layoutX="60.0" layoutY="250.0" prefHeight="31.0" prefWidth="61.0" text="상의/하의" />
       <ComboBox layoutX="160.0" layoutY="365.0" prefHeight="22.0" prefWidth="150.0" promptText="              옵션" />
@@ -22,7 +21,7 @@ fx:controller="Shop_pack.ShopController_test">
       <ImageView fitHeight="154.0" fitWidth="252.0" layoutX="94.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true" />
       <Label layoutX="219.0" layoutY="439.0" text="개" />
       <Label layoutX="72.0" layoutY="491.0" text="가격" />
-      <Button fx:id="btnLogin" layoutX="314.0" layoutY="17.0" mnemonicParsing="false" text="로그인" />
+      <Button fx:id="btnLogin" layoutX="240.0" layoutY="17.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="126.0" text="로그인" />
       <Button fx:id="btnSignUp" layoutX="384.0" layoutY="17.0" mnemonicParsing="false" text="회원가입" />
    </children>
 </AnchorPane>
