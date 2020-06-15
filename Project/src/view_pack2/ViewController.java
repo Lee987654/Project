@@ -269,7 +269,7 @@ public class ViewController implements Initializable {
 	public void handleBtnRegAction(ActionEvent e) {
 		if (loginMember.getId().equals("")) {
 			messagePopup("로그인하세요.");
-		} else if(tableView.getColumns().get(0).getCellValueFactory()==null){
+		} else if(selectedList.size()==0){
 			messagePopup("상품을 선택하세요.");
 		}else {
 			for (int i = 0; i < selectedList.size(); i++) {
