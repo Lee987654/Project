@@ -7,7 +7,7 @@
 
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-fx:controller="Shop_pack.SignUpController">
+fx:controller="view_pack2.SignUpController">
    <children>
       <Label layoutX="118.0" layoutY="3.0" prefHeight="23.0" prefWidth="48.0" text="회원가입" />
       <Label layoutX="60.0" layoutY="44.0" text="아이디" />
