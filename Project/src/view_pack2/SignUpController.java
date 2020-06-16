@@ -33,7 +33,7 @@ public class SignUpController implements Initializable {
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String url = "jdbc:oracle:thin:@192.168.10.1:1521:xe";
 		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");

@@ -60,7 +60,7 @@ public class ViewController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
-		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String url = "jdbc:oracle:thin:@192.168.10.1:1521:xe";
 
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -291,12 +291,12 @@ public class ViewController implements Initializable {
 							* Integer.parseInt(selectedList.get(i).getPrice()));
 					pstmt.executeUpdate();
 
-					selectedList.clear();
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 			}
+			selectedList.clear();
 			messagePopup("구매가 완료되었습니다.");
 		}
 	}
