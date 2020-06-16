@@ -60,7 +60,7 @@ public class ViewController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
-		String url = "jdbc:oracle:thin:@192.168.10.1:1521:xe";
+		String url = "jdbc:oracle:thin:@192.168.0.25:1521:xe";
 
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
